@@ -41,7 +41,7 @@ function! s:outline_info.create_heading(which, heading_line, matched_line, conte
   let level = s:matchcount(matches[1] , " ")
   let tag = matches[2]
   let heading.level = level
-  let heading.word = substitute(tag, '^\(.\)', '\u\1', '')
+  let heading.word = tag
 
   if heading.level > 0
     return heading
